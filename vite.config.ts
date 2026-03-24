@@ -11,9 +11,9 @@ import tailwindcss from "@tailwindcss/vite";
 const config = defineConfig({
   plugins: [
     devtools(),
-    // cloudflare({
-    //   viteEnvironment: { name: "ssr" },
-    // }),
+    cloudflare({
+      viteEnvironment: { name: "ssr" },
+    }),
     tsconfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
     tanstackStart(),
